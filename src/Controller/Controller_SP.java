@@ -125,10 +125,10 @@ public class Controller_SP {
             {
                 for(i=0;i<jmlbaris;i++)
                 {
-                    if(form.getCmbBrg().getSelectedItem().toString().equals(tblModel.getValueAt(i, 0).toString()))
+                    if(form.getCmbBrg().getSelectedItem().toString().equals(tblModel.getValueAt(i, 1).toString()))
                     {
                         datasama = 1;
-                        JOptionPane.showMessageDialog(null, "Kode Barang " + tblModel.getValueAt(i, 0).toString() + " sudah pernah ditambahkan, dan akan diupdate dengan data terbaru");
+                        JOptionPane.showMessageDialog(null, "Kode Barang " + tblModel.getValueAt(i, 1).toString() + " sudah pernah ditambahkan, dan akan diupdate dengan data terbaru");
                         
                         tblModel.setValueAt(form.getCmbFPB().getSelectedItem().toString(),i,0);
                         tblModel.setValueAt(form.getCmbBrg().getSelectedItem().toString(),i,1);
@@ -202,7 +202,7 @@ public class Controller_SP {
     public void isicombobarang() {
         form.getCmbBrg().removeAllItems();
         form.getCmbBrg().addItem("Pilih");
-        for (SP f : model.isicombobarang())
+        for (SP f : model.isicombobarang(form.getCmbFPB().getSelectedItem().toString()))
         {
             form.getCmbBrg().addItem(String.valueOf(f.getKdBrg()));
         }

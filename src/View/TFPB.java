@@ -676,8 +676,16 @@ public class TFPB extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNmBrgKeyPressed
 
     private void cmdTambahKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmdTambahKeyPressed
-        controller.isiTable();
-        controller.reset2();
+        if(getCmbKar().getSelectedIndex() == 0 || getCmbBrg().getSelectedIndex() == 0 || getTxtJmlMinta().getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Periksa kembali kelengkapan Input Anda.");
+        }
+        else
+        {
+            controller.isiTable();
+            controller.reset2();
+            cmbKar.disable();
+        }
     }//GEN-LAST:event_cmdTambahKeyPressed
 
     private void cmdTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdTambahActionPerformed
@@ -689,6 +697,7 @@ public class TFPB extends javax.swing.JFrame {
         {
             controller.isiTable();
             controller.reset2();
+            cmbKar.disable();
         }
     }//GEN-LAST:event_cmdTambahActionPerformed
 
@@ -696,12 +705,13 @@ public class TFPB extends javax.swing.JFrame {
         if(evt.getKeyCode()== KeyEvent.VK_ENTER)
         {
             controller.reset();
+            cmbKar.enable();
         }
-        txtJmlMinta.requestFocus();
     }//GEN-LAST:event_cmdBatalKeyPressed
 
     private void cmdBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBatalActionPerformed
         controller.reset();
+        cmbKar.enable();
     }//GEN-LAST:event_cmdBatalActionPerformed
 
     private void cmdSimpanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmdSimpanKeyPressed

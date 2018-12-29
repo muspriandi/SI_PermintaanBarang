@@ -735,6 +735,8 @@ public class TSP extends javax.swing.JFrame {
         if(getCmbFPB().getSelectedIndex() > 0)
         {
             controller.getAllFpb();
+            controller.isicombobarang();
+            controller.reset2();
         }
     }//GEN-LAST:event_cmbFPBItemStateChanged
 
@@ -762,6 +764,8 @@ public class TSP extends javax.swing.JFrame {
         {
             controller.isiTable();
             controller.reset2();
+            cmbFPB.disable();
+            cmbSpl.disable();
         }
     }//GEN-LAST:event_cmdTambahActionPerformed
 
@@ -774,6 +778,8 @@ public class TSP extends javax.swing.JFrame {
         {
             controller.isiTable();
             controller.reset2();
+            cmbFPB.disable();
+            cmbSpl.disable();
         }
     }//GEN-LAST:event_cmdTambahKeyPressed
 
@@ -807,14 +813,17 @@ public class TSP extends javax.swing.JFrame {
 
     private void cmdBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBatalActionPerformed
         controller.reset();
+        cmbFPB.enable();
+        cmbSpl.enable();
     }//GEN-LAST:event_cmdBatalActionPerformed
 
     private void cmdBatalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmdBatalKeyPressed
         if(evt.getKeyCode()== KeyEvent.VK_ENTER)
         {
             controller.reset();
+            cmbFPB.enable();
+            cmbSpl.enable();
         }
-        txtJmlPesan.requestFocus();
     }//GEN-LAST:event_cmdBatalKeyPressed
 
     private void txtNmBrgKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNmBrgKeyPressed

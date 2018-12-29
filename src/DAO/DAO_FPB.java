@@ -180,7 +180,7 @@ public class DAO_FPB implements Model_DAO<FPB>{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    //METHOD UNTUK MENAMBILKAN KODE KARYAWAN KE DALAM COMBO BOX
+    //METHOD UNTUK MENAMPILKAN KODE KARYAWAN KE DALAM COMBO BOX
     public List<FPB> isicombokaryawan()
     {
         PreparedStatement statement;

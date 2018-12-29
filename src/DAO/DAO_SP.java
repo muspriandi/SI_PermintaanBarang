@@ -237,15 +237,16 @@ public class DAO_SP implements Model_DAO<SP>{
     }
     
     //METHOD UNTUK MENAMBILKAN KODE BARANG KE DALAM COMBO BOX
-    public List<SP> isicombobarang()
+    public List<SP> isicombobarang(String kode)
     {
         PreparedStatement statement;
         List<SP> list = null;
         try
         {
             list = new ArrayList();
-            String TAMPILBARANG = "SELECT KdBrg FROM barang ORDER BY KdBrg";
+            String TAMPILBARANG = "SELECT KdBrg FROM minta WHERE NoFPB=? ORDER BY KdBrg";
             statement = connection.prepareStatement(TAMPILBARANG);
+            statement.setString(1, kode);
             ResultSet rs = statement.executeQuery();
             while (rs.next())
             {
