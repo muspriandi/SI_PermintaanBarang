@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RepPermintaan" language="groovy" pageWidth="576" pageHeight="792" columnWidth="536" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
-	<property name="ireport.zoom" value="2.589203410794879"/>
-	<property name="ireport.x" value="808"/>
-	<property name="ireport.y" value="626"/>
+	<property name="ireport.zoom" value="0.9982500000000215"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="43"/>
 	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
 	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
@@ -74,7 +74,7 @@ ORDER BY A.NmBrg;]]>
 		<band splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="225" splitType="Stretch">
+		<band height="240" splitType="Stretch">
 			<line>
 				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="536" height="1"/>
 				<graphicElement>
@@ -83,14 +83,14 @@ ORDER BY A.NmBrg;]]>
 			</line>
 			<staticText>
 				<reportElement x="0" y="35" width="129" height="20"/>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Tanggal Surat Pesanan]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="15" width="129" height="20"/>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Nomor Surat Pesanan]]></text>
@@ -118,7 +118,7 @@ ORDER BY A.NmBrg;]]>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="91" width="129" height="20"/>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Nama Supplier]]></text>
@@ -132,7 +132,7 @@ ORDER BY A.NmBrg;]]>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="111" width="129" height="20"/>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Alamat]]></text>
@@ -146,7 +146,7 @@ ORDER BY A.NmBrg;]]>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="131" width="129" height="20"/>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Email]]></text>
@@ -160,7 +160,7 @@ ORDER BY A.NmBrg;]]>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="151" width="129" height="20"/>
-				<textElement>
+				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Telepon]]></text>
@@ -173,13 +173,11 @@ ORDER BY A.NmBrg;]]>
 				<text><![CDATA[:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="182" width="534" height="42"/>
-				<textElement>
+				<reportElement x="0" y="189" width="534" height="16"/>
+				<textElement verticalAlignment="Middle">
 					<font size="11"/>
 				</textElement>
-				<text><![CDATA[Dengan Hormat,
-
-Berikut ini rincian arang yang kami pesan :]]></text>
+				<text><![CDATA[Dengan Hormat,]]></text>
 			</staticText>
 			<textField>
 				<reportElement style="Detail" x="135" y="35" width="120" height="20"/>
@@ -213,6 +211,25 @@ Berikut ini rincian arang yang kami pesan :]]></text>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{NoSP}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="0" y="205" width="331" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Berdasarkan permintaan dengan surat permintaan barang beromor]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="331" y="205" width="61" height="16"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NoFPB}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="220" width="534" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Berikut daftar barang yang kami pesan :]]></text>
+			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
