@@ -725,6 +725,7 @@ public class TFPB extends javax.swing.JFrame {
             controller.insert_minta();
             controller.cetak();
             controller.reset();
+            cmbKar.enable();
         }
     }//GEN-LAST:event_cmdSimpanKeyPressed
 
@@ -739,6 +740,7 @@ public class TFPB extends javax.swing.JFrame {
             controller.insert_minta();
             controller.cetak();
             controller.reset();
+            cmbKar.enable();
         }
     }//GEN-LAST:event_cmdSimpanActionPerformed
 

@@ -42,11 +42,8 @@ public class DAO_FPB implements Model_DAO<FPB>{
         
         try
         {
-            //String COUNTER = "SELECT IFNULL(MAX(CONVERT(RIGHT(NoFPB,4),SIGNED INTEGER)),0) AS kode,"
-            //        + "IFNULL(LENGHT(MAX(CONVERT(RIGHT(NoFPB,5)+1,SIGNED INTEGER))),0) AS panjang FROM fpb";
-            
             String COUNTER = "SELECT IFNULL(MAX(CONVERT(RIGHT(NoFPB,4),SIGNED INTEGER)),0) AS kode,"
-                    + "IFNULL(MAX(CONVERT(RIGHT(NoFPB,5)+1,SIGNED INTEGER)),0) AS panjang FROM fpb";
+                                + "IFNULL(LENGTH(MAX(CONVERT(RIGHT(NoFPB,4)+1,SIGNED INTEGER))),0) AS panjang FROM fpb";
             
             statement = connection.prepareStatement(COUNTER);
             ResultSet rs2 = statement.executeQuery();

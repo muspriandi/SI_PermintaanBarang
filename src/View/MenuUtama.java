@@ -46,6 +46,7 @@ public class MenuUtama extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         Laporan = new javax.swing.JMenu();
         LaporanPermintaan = new javax.swing.JMenuItem();
+        LaporanPermintaan1 = new javax.swing.JMenuItem();
         Keluar = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -68,15 +69,15 @@ public class MenuUtama extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 147, Short.MAX_VALUE)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,6 +160,15 @@ public class MenuUtama extends javax.swing.JFrame {
         });
         Laporan.add(LaporanPermintaan);
 
+        LaporanPermintaan1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LaporanPermintaan1.setText("Laporan Pemesanan Barang");
+        LaporanPermintaan1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LaporanPermintaan1ActionPerformed(evt);
+            }
+        });
+        Laporan.add(LaporanPermintaan1);
+
         jMenuBar1.add(Laporan);
 
         Keluar.setText("Keluar");
@@ -227,6 +237,12 @@ public class MenuUtama extends javax.swing.JFrame {
         setLocationRelativeTo(this);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
+    private void LaporanPermintaan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LaporanPermintaan1ActionPerformed
+        View.LapPesan p = new View.LapPesan();
+        p.setVisible(true);
+        setLocationRelativeTo(this);
+    }//GEN-LAST:event_LaporanPermintaan1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -266,6 +282,7 @@ public class MenuUtama extends javax.swing.JFrame {
     private javax.swing.JMenu Keluar;
     private javax.swing.JMenu Laporan;
     private javax.swing.JMenuItem LaporanPermintaan;
+    private javax.swing.JMenuItem LaporanPermintaan1;
     private javax.swing.JMenuItem MKaryawan;
     private javax.swing.JMenuItem MSupplier;
     private javax.swing.JMenu Master;

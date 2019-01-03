@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RepPermintaan" language="groovy" pageWidth="576" pageHeight="792" columnWidth="536" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
 	<property name="ireport.zoom" value="0.9982500000000215"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="43"/>
+	<property name="ireport.y" value="22"/>
 	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
 	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
@@ -64,7 +64,7 @@ ORDER BY A.NmBrg;]]>
 	<title>
 		<band height="59" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="0" y="18" width="536" height="41"/>
+				<reportElement style="Title" x="0" y="0" width="536" height="59"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Surat Pemesanan Barang]]></text>
 			</staticText>
@@ -180,32 +180,32 @@ ORDER BY A.NmBrg;]]>
 				<text><![CDATA[Dengan Hormat,]]></text>
 			</staticText>
 			<textField>
-				<reportElement style="Detail" x="135" y="35" width="120" height="20"/>
+				<reportElement style="Detail" x="135" y="35" width="193" height="20"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle"/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{TglSP}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="135" y="91" width="120" height="20"/>
+				<reportElement style="Detail" x="135" y="91" width="399" height="20"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle"/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{NmSpl}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="135" y="111" width="120" height="20"/>
+				<reportElement style="Detail" x="135" y="111" width="399" height="20"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle"/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{Alamat}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="135" y="131" width="120" height="20"/>
+				<reportElement style="Detail" x="135" y="131" width="399" height="20"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle"/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{Email}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="Detail" x="135" y="151" width="120" height="20"/>
+				<reportElement style="Detail" x="135" y="151" width="399" height="20"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle"/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{Telp}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="135" y="15" width="120" height="20"/>
+				<reportElement x="135" y="15" width="192" height="20"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
@@ -242,7 +242,7 @@ ORDER BY A.NmBrg;]]>
 			<staticText>
 				<reportElement style="Column header" x="226" y="3" width="101" height="17"/>
 				<textElement/>
-				<text><![CDATA[Harga SP]]></text>
+				<text><![CDATA[Harga Pesan]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="Column header" x="331" y="3" width="93" height="17"/>
@@ -343,7 +343,7 @@ ORDER BY A.NmBrg;]]>
 			<textField pattern="dd MMMMM yyyy">
 				<reportElement style="Column header" x="443" y="32" width="92" height="20" forecolor="#000000"/>
 				<textElement textAlignment="Right">
-					<font size="10" isBold="false"/>
+					<font fontName="SansSerif" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>

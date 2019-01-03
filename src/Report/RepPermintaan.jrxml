@@ -66,7 +66,7 @@ ORDER BY B.NoFPB;]]>
 	<title>
 		<band height="59" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="1" y="24" width="715" height="33"/>
+				<reportElement style="Title" x="1" y="0" width="715" height="59"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<text><![CDATA[Laporan Permintaan Barang]]></text>
 			</staticText>
@@ -121,7 +121,7 @@ ORDER BY B.NoFPB;]]>
 			<staticText>
 				<reportElement style="Column header" x="111" y="3" width="129" height="17"/>
 				<textElement/>
-				<text><![CDATA[Tgl FPB]]></text>
+				<text><![CDATA[Tanggal FPB]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="Column header" x="244" y="3" width="109" height="17"/>
@@ -136,7 +136,7 @@ ORDER BY B.NoFPB;]]>
 			<staticText>
 				<reportElement style="Column header" x="536" y="3" width="89" height="17"/>
 				<textElement/>
-				<text><![CDATA[HargaFPB]]></text>
+				<text><![CDATA[Harga Minta]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="Column header" x="629" y="3" width="86" height="17"/>
@@ -251,7 +251,7 @@ ORDER BY B.NoFPB;]]>
 			<textField pattern="dd MMMMM yyyy">
 				<reportElement style="Column header" x="625" y="10" width="92" height="20" forecolor="#000000"/>
 				<textElement textAlignment="Right">
-					<font size="10" isBold="false"/>
+					<font fontName="SansSerif" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>

@@ -794,6 +794,8 @@ public class TSP extends javax.swing.JFrame {
             controller.insert_pesan();
             controller.cetak();
             controller.reset();
+            cmbFPB.enable();
+            cmbSpl.enable();
         }
     }//GEN-LAST:event_cmdSimpanActionPerformed
 
@@ -808,6 +810,8 @@ public class TSP extends javax.swing.JFrame {
             controller.insert_pesan();
             controller.cetak();
             controller.reset();
+            cmbFPB.enable();
+            cmbSpl.enable();
         }
     }//GEN-LAST:event_cmdSimpanKeyPressed
 

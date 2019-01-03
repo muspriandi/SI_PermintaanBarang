@@ -42,11 +42,8 @@ public class DAO_SP implements Model_DAO<SP>{
         
         try
         {
-            //String COUNTER = "SELECT IFNULL(MAX(CONVERT(RIGHT(NoSP,4),SIGNED INTEGER)),0) AS kode,"
-            //        + "IFNULL(LENGHT(MAX(CONVERT(RIGHT(NoSP,5)+1,SIGNED INTEGER))),0) AS panjang FROM fpb";
-            
             String COUNTER = "SELECT IFNULL(MAX(CONVERT(RIGHT(NoSP,4),SIGNED INTEGER)),0) AS kode,"
-                    + "IFNULL(MAX(CONVERT(RIGHT(NoSP,5)+1,SIGNED INTEGER)),0) AS panjang FROM suratpesan";
+                                + "IFNULL(LENGTH(MAX(CONVERT(RIGHT(NoSP,4)+1,SIGNED INTEGER))),0) AS panjang FROM suratpesan";
             
             statement = connection.prepareStatement(COUNTER);
             ResultSet rs2 = statement.executeQuery();
