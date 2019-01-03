@@ -66,11 +66,12 @@ public class Controller_LapPesan {
             parameter.put("tgl_awal", (form.getTgl1().getText()));
             parameter.put("tgl_akhir", (form.getTgl2().getText()));
             
-            JasperPrint print   = JasperFillManager.fillReport(path, parameter,conn);
+            JasperPrint print   = JasperFillManager.fillReport(path, parameter, conn);
             
             JRXlsxExporter xlsxExporter = new JRXlsxExporter();
             xlsxExporter.setParameter(JRExporterParameter.JASPER_PRINT, print);
             xlsxExporter.setParameter(JRExporterParameter.OUTPUT_FILE, xlsx);
+            xlsxExporter.exportReport();
             
             JOptionPane.showMessageDialog(null, "Data Berhasil dicetak, cek pada drive D:/LapPesan.xlsx");
         }

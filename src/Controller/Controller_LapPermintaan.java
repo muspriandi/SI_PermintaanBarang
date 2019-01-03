@@ -61,16 +61,17 @@ public class Controller_LapPermintaan {
         try {
             Connection conn = Koneksi.Database.KoneksiDB();
             String path = "src/Report/RepPermintaan.jasper";
-            File xlsx = new File ("D:/LapPermintaan.xlsx");
+            File xlsx = new File("D:/LapPermintaan.xlsx");
             HashMap parameter = new HashMap();
             parameter.put("tgl_awal", (form.getTgl1().getText()));
             parameter.put("tgl_akhir", (form.getTgl2().getText()));
             
-            JasperPrint print   = JasperFillManager.fillReport(path, parameter,conn);
+            JasperPrint print   = JasperFillManager.fillReport(path,parameter,conn);
             
-            JRXlsxExporter xlsxExporter = new JRXlsxExporter();
-            xlsxExporter.setParameter(JRExporterParameter.JASPER_PRINT, print);
-            xlsxExporter.setParameter(JRExporterParameter.OUTPUT_FILE, xlsx);
+            JRXlsxExporter Xlsxexporter = new JRXlsxExporter();
+            Xlsxexporter.setParameter(JRExporterParameter.JASPER_PRINT,print);
+            Xlsxexporter.setParameter(JRExporterParameter.OUTPUT_FILE,xlsx);
+            Xlsxexporter.exportReport();
             
             JOptionPane.showMessageDialog(null, "Data Berhasil dicetak, cek pada drive D:/LapPermintaan.xlsx");
         }
